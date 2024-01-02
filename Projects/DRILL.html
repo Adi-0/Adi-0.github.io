@@ -1,34 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>adi@xTerm~$ cd HOME/ADI/DOCUMENTS/DRILL.txt</title>
   <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
   <div class="terminal">
-      <div class="terminal-header">
-          <div class="terminal-buttons">
-              <div class="terminal-button"></div>
-              <div class="terminal-button2"></div>
-              <div class="terminal-button3"></div>
-          </div>
+    <div class="terminal-header">
+      <div class="terminal-buttons">
+        <div class="terminal-button"></div>
+        <div class="terminal-button2"></div>
+        <div class="terminal-button3"></div>
       </div>
-      <div class="terminal-body">
-          <div class="terminal-content">
-            <h1>DC_Power_Drill.sh</h1>
-            <p>I love most of my projects, but this one holds a special place in my heart since</p>
-            <h2>idk</h2>
-            <ul>
-                <li>idk</li>
-                <li>idk</li>
-            </ul>
-            <ul>
-                <li><a href="/index.html">[cd ..]</a> BACK TO HOME</li>
-            </ul>
-          </div>
+    </div>
+    <div class="terminal-body">
+      <div class="terminal-content">
+        <h1>DC_Power_Drill.sh</h1>
+        <h3>TIME FRAME: November 2022 - December 2022</h3>
+        <p>Custom-Fabricated DC power drill [AKA: A Fancy Glorified Screwdriver]</p>
+        <h3>0|COOL PICTURE</h3>
+
+        <img src="/Assets/DrillPCB.jpeg" alt="The Final PCB layout" class="center-border-smol">
+
+        <h3>1|CONTEXT</h3>
+        <p>I love most of my projects, but this one holds a special place in my heart since this was my first official
+          and complete project that involved designing a board and turning it into an actual machine from total scratch.
+          The number of all nighters I spent in random rooms and solder stations made it feel like I was being thrown
+          off into the deep end (I was). However, the experience was completely worth it.</p>
+        <p>From relearning circuit theory (RLC circuits feel like sorcery at times still) all over again to learning how
+          to create a BOM and search and order parts from sites like DigiKey, to finally discovering how to properly
+          hold an iron in a way that wouldn't end up with me burning myself every hour, this project singlehandedly
+          taught me the fundamentals of practically everything. Most if not all of the concepts I have learned here
+          apply to me and are essential in whatever I work on to this day, so it seems only fitting to put this here.
+          Also, it's a really cool project!</p>
+
+        <h3>2|OVERVEIW</h3>
+        <p> I designed and constructed a PCB board based an LM555 Oscillator-based circuit that:</p>
+        <ul>
+          <li>Converts 20V battery power to 6V using a RLC based buck converter (to efficiently utilize the motor)</li>
+          <li>Regulated motor speed based on a 10K potentiometer input</li>
+          <li>Utilized an H bridge to control the direction of the motor, with a switch as the input</li>
+          
+        </ul>
+        <p> [PLACEhOHLDHER]</p>
+        <img src="/Assets/DrillSCHEM.jpeg" alt="Schematic" class="center-border">
+        <ul>
+          <p class=center>F1: EAGLE Schematic Editor</p>
+
+          <li><a href="/index.html">[cd ..]</a> BACK TO HOME</li>
+        </ul>
       </div>
+    </div>
   </div>
 </body>
+
 </html>

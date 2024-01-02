@@ -9,6 +9,7 @@ body {
 }
 
 .terminal {
+  /*Thank god for the existence of w3schools */
   width: 80%;
   margin: 50px auto;
   background-color: #000;
@@ -25,6 +26,7 @@ body {
 }
 
 .terminal-buttons {
+  /*For color scheme aesthetic. Might remove later*/
   display: flex;
 }
 
@@ -47,7 +49,7 @@ body {
 .terminal-button3 {
   width: 12px;
   height: 12px;
-  background-color: #a51d2d;
+  background-color: #be4444;
   border-radius: 50%;
   margin-left: 5px;
 }
@@ -61,8 +63,13 @@ body {
   line-height: 1.5;
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #ffbe6f;
+}
+
+h3 {
+  color: #be4444;
 }
 
 ul {
@@ -84,9 +91,11 @@ a:link {
 
 a:visited {
   color: #ff7800;
+  /*  color: #be4444; Not sure if I want to make the color change when the link is clicked, but just in case this is the hex I would use if it did.*/
   background-color: transparent;
   text-decoration: none;
 }
+
 
 a:hover {
   color: #ffa348;
@@ -95,8 +104,58 @@ a:hover {
 }
 
 a:active {
+  /* cool flash nobody will notice :(*/
   color: #ffffff;
   background-color: transparent;
   text-decoration: underline;
 }
 
+::-moz-selection {
+  /* because Firefox is apparantly cool and different*/
+  color: #000000;
+  background: #ffa46b;
+}
+
+::selection {
+  color: #000000;
+  background: #ffa46b;
+}
+
+.line {
+  /*Fancy line that DOES NOT WANT TO WORK(??)*/
+  width: 100%;
+  border: 1px solid #ff7800;
+  box-shadow: 0 0 10px #ffbe6f;
+
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.center-border {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: 1px solid #be4444;
+  box-shadow: 0 0 8px #ffbe6f;
+}
+
+.center-border-smol {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  border: 1px solid #be4444;
+  box-shadow: 0 0 8px #ffbe6f;
+}
+
+p2 {
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
