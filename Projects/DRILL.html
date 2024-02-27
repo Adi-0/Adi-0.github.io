@@ -27,35 +27,54 @@
         <img src="/Assets/DrillPCB.jpeg" alt="The Final PCB layout" class="center-border-smol">
 
         <h3>1|CONTEXT</h3>
-        <p>I love most of my projects, but this one holds a special place in my heart since this was my first official
+        <p>I love most of my projects, but this one holds a special place in my heart as this was my first official
           and complete project that involved designing a board and turning it into an actual machine from total scratch.
           The number of all nighters I spent in random rooms and solder stations made it feel like I was being thrown
           off into the deep end (I was). However, the experience was completely worth it.</p>
+
         <p>From relearning circuit theory (RLC circuits feel like sorcery at times still) all over again to learning how
           to create a BOM and search and order parts from sites like DigiKey, to finally discovering how to properly
           hold an iron in a way that wouldn't end up with me burning myself every hour, this project singlehandedly
           taught me the fundamentals of practically everything. Most if not all of the concepts I have learned here
           apply to me and are essential in whatever I work on to this day, so it seems only fitting to put this here.
-          Also, it's a really cool project!</p>
+        </p>
 
         <h3>2|OVERVEIW</h3>
         <p> I designed and constructed a PCB board based an LM555 Oscillator-based circuit that:</p>
         <ul>
           <li>Converts 20V battery power to 6V using a RLC based buck converter (to efficiently utilize the motor)</li>
           <li>Regulated motor speed based on a 10K potentiometer input</li>
-          <li>Utilized an H bridge to control the direction of the motor, with a switch as the input</li>
-
+          <li>Utilized an H bridge to control the direction of the motor, with a switch serving as the input from the
+            user</li>
         </ul>
-        <p>test</p>
-
-        <p> <b>[PLACEHOLDER FROM LINKEDIN. MORE SPACE HERE TO DETAIL THOUGH.]</b> Components were sourced and then tested on a breadboard with a standard oscilloscope and
-          multimeter, then soldered onto a 2" Adafruit perf board before being turned into a PCB design with Autodesk
-          Eagle.
-        </p>
+        <p>I had go in-depth about RLC circuits and brush up on related circuit theory to actually design a schematic
+          properly. Additionally, I used the same 555 timer for various other small breadboard projects to get
+          a good idea about what to do and how to use the IC to its full potential. Even then however, I still ran into
+          many challenges and obstacles when trying to put together a proper schematic. This is to be expected given
+          that I did this in a time where the entire EDA design process was new and foreign to me. Sure, I had
+          experience with repairing ewaste and other electronics in the past. However, this was completely different
+          since I never created something original from absolutely nothing.</p>
         <img src="/Assets/DrillSCHEM.jpeg" alt="Schematic" class="center-border">
-        <ul>
-          <p class=center>F1: EAGLE Schematic Editor</p>
 
+        <p class=center>F1: EAGLE Schematic Editor</p>
+
+
+        <p>With enough time though, things took a positive turn. And right before I resorted to pulling my hair out, I
+          had a schematic that both included actual part libraries backed by the power of sound math. Once everything
+          miraculously checked out in theory and in tbe EAGLE schematic (before the
+          tragic news of its discontinuation in 2026 was announced) these components were sourced and then
+          tested on a breadboard with a standard oscilloscope and
+          multimeter, and then soldered onto a 2" Adafruit perf board before being turned into a PCB design.
+        </p>
+
+
+        <h3>3|ANALYSIS</h3>
+        
+        <p>Truthfully? This was less of a first cool gadget and more of a rite of passage for me at the end. From this
+          one board, I got the opportunity to learn what resilience and problem solving really meant when it came to working with both EDA software. I
+          also discovered the immediate rush of serotonin one feels when the vision they had finally exists in a
+          tangible and physical way, and since then I don't think I can go back.</p>
+        <ul>
           <li><a href="/index.html">[cd ..]</a> BACK TO HOME</li>
         </ul>
       </div>
