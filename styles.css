@@ -72,6 +72,11 @@ h3 {
   color: #be4444;
 }
 
+h4 {
+  color: #ffa053;
+  font-size:17px;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -159,3 +164,8 @@ p2 {
   vertical-align: middle;
   display: table-cell;
 }
+
+.br2 { 
+    display: block; 
+    margin-bottom: -.2em; 
+} 
