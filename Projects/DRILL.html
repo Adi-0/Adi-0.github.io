@@ -27,16 +27,12 @@
         <img src="/Assets/DrillPCB.jpeg" alt="The Final PCB layout" class="center-border-smol">
 
         <h3>1|CONTEXT</h3>
-        <p>I love most of my projects, but this one holds a special place in my heart as this was my first official
-          and complete project that involved designing a board and turning it into an actual machine from total scratch.
-          The number of all nighters I spent in random rooms and solder stations made it feel like I was being thrown
-          off into the deep end (I was). However, the experience was completely worth it.</p>
+        <p>While I love most of my projects, this one holds a special place in my heart. The questionable screwdriver footprint you see above was my first truly complete project that involved prototyping a board and making it become a reality from start to finish. 
+        </p>
 
-        <p>From relearning circuit theory (RLC circuits feel like sorcery at times still) all over again to learning how
-          to create a BOM and search and order parts from sites like DigiKey, to finally discovering how to properly
-          hold an iron in a way that wouldn't end up with me burning myself every hour, this project singlehandedly
-          taught me the fundamentals of practically everything. Most if not all of the concepts I have learned here
-          apply to me and are essential in whatever I work on to this day, so it seems only fitting to put this here.
+        <p>The number of all nighters I spent soldering and prototyping different designs in random campus rooms at odd hours made it feel like I was being thrown off into the deep end (I was). Like many things in life, it wouldn’t be until much later after this project was complete that I would finally understand just how valuable this experience was.</p>
+
+        <p>From relearning circuit theory (RLC circuits feel like sorcery at times still) all over again to learning how to create a BOM and search and order parts from sites like DigiKey, to finally discovering how to properly hold an iron in a way that wouldn't end up with me burning myself every hour, this project singlehandedly taught me the fundamentals of practically everything. Most if not all of the concepts I have learned here apply to me and are essential in whatever I work on to this day, so it seems only fitting to list this project on the site.
         </p>
 
         <h3>2|OVERVEIW</h3>
@@ -47,39 +43,42 @@
           <li>Utilized an H bridge to control the direction of the motor, with a switch serving as the input from the
             user</li>
         </ul>
-        <p>I had go in-depth about RLC circuits and brush up on related circuit theory to actually design a schematic
-          properly. Additionally, I used the same 555 timer for various other small breadboard projects to get
-          a good idea about what to do and how to use the IC to its full potential. Even then however, I still ran into
-          many challenges and obstacles when trying to put together a proper schematic. This is to be expected given
-          that I did this in a time where the entire EDA design process was new and foreign to me. Sure, I had
-          experience with repairing ewaste and other electronics in the past. However, this was completely different
-          since I never created something original from absolutely nothing.</p>
+        <p>Designing a proper schematic required me to further understand RLC circuits and brush up on relevant circuit theory. This process was straightforward and easy to accomplish. However, though the 555 timer is a standard component that is known and loved by all, trying to understand this component for the first time would be one of my most notable obstacles. Datasheets felt too foreign and complicated, and simply watching media online (though helpful) only carried my understanding so far.
+        </p>
+
+        <p>What helped immensely was actually using the component hands on. I started small and just tried to get the device to emit a clock signal and analyze it on an oscilloscope. From there, I used the same 555 timer in other smaller breadboard projects to get a proper understanding of how to use different functions of the component and unlock its potential.
+        </p>
+
+        <p>This was immensely valuable for me, but even after I had a good idea about how the components themselves could work, putting together a proper schematic first in theory and then in EAGLE for the first time took the longest amount of time for me to get through. I expected my experience with tinkering and repairing e-waste to help me greatly when I started the project, but I never realized that creating something from absolutely nothing would be a whole different ball game and experience.
+        </p>
         <img src="/Assets/DrillSCHEM.jpeg" alt="Schematic" class="center-border">
 
         <p class=center>F1: EAGLE Schematic Editor</p>
 
+        <p>With enough time, things did become less challenging. Right before I resorted to pulling my hair out, I had a schematic that both included actual part libraries as well as correct math. Once everything miraculously checked out in theory and in the EAGLE schematic, these components were sourced and tested on a breadboard with a standard oscilloscope and multimeter. 
+        </p>
+        <br>
 
-        <p>With enough time though, things took a positive turn. And right before I resorted to pulling my hair out, I
-          had a schematic that both included actual part libraries backed by the power of sound math. Once everything
-          miraculously checked out in theory and in tbe EAGLE schematic (before the
-          tragic news of its discontinuation in 2026 was announced) these components were sourced and then
-          tested on a breadboard with a standard oscilloscope and
-          multimeter, and then soldered onto a 2" Adafruit perf board before being turned into a PCB design.
+        <p>Unsurprisingly, things went totally south at this stage, and I had to start the whole design process again. </p>
+        <br>
+
+
+        <p>At some point though, a design found itself soldered onto a 2" Adafruit perf board before being turned into a PCB footprint. At this point, I had enough and just used the autorouter to do the traces. I learned about how to do it properly myself later that week on something else, and ground planes were introduced to me further down the line when I had to design a light ring for my club’s ROV (That project is coincidentally on this site too!).
         </p>
 
 
         <h3>3|ANALYSIS</h3>
         
-        <p>Truthfully? This was less of a first cool gadget and more of a rite of passage for me at the end. From this
-          one board, I got the opportunity to learn what resilience and problem solving really meant when it came to working with both EDA software. I
-          also discovered the immediate rush of serotonin one feels when the vision they had finally exists in a
-          tangible and physical way, and since then I don't think I can go back.</p>
+        <p>The point is, the entire experience became a rite of passage for me. This one board gave me the opportunity to learn what resilience and problem solving really meant.</p>
+        <p>After all, getting through those first-time obstacles defined my perspective on how to do many things in this space, and finally creating something with my own two hands led me to discover the immediate rush of serotonin one feels when the vision they had finally exists in a tangible and physical way. That's when I knew I would be set on this path.</p>
         <ul>
           <li><a href="/index.html">[cd ..]</a> BACK TO HOME</li>
         </ul>
       </div>
     </div>
   </div>
+  <script src="/script.js"></script>
+
 </body>
 
 </html>

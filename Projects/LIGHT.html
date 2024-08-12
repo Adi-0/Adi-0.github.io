@@ -26,34 +26,57 @@
             
             <h3>1|CONTEXT</h3>
 
-            <p>This board isn't the most complex thing ever, but designing this ring taught me much of the fundamental concepts in the PCB design process I use to this day. Because it's one of the more impactful projects I have gotten the opportunity to work on in terms of self growth, I decided it's worth it to specifically mention this project on my site.</p>
-            <p>First off though, given that we're in the "context" section of the page, a backstory wouldn't hurt. Slugbotics (A vibrant and geeky robotics club at UCSC... more info on that on my resume!), had only 3 teams for the ROV; one of the responsibilities for the electrical department involved finding solutions to any requirement for the vehicle that delt with PCBs or power management. Issues pertaining to visibility underwater for our cameras was a major focus for our team.</p>
-            <p>Having been using EDA software for 5 months prior to this specific project, I still felt very green in various areas yet confident enough to tackle the board for the actual light fixture on my own. That isn't to say that I didn't borrow concepts from the lights used in previous years or those in other projects to optimize the design, there was a lot to learn from past successes and mistakes and I firmly believe continuous improvement comes from looking around us first.</p>
-            <p>That's a gist of the background behind this board, but it's about time that we get into the actual design.</p>
+            <p>This project earned a spot here because, while the design may not seem to be extremely complicated nor unique at first glance, designing this ring taught me much of the fundamental concepts in the PCB design process I still heavily rely on and use to this day. It is one of the more impactful projects towards my self growth I have been given the opportunity to work on.
+            </p>
+            <p>This board was done when Slugbotics (A vibrant and geeky robotics club at UCSC... more info on that on my resume!), had only 3 subteams for the ROV competition. One of the responsibilities for the electrical department involved finding solutions to any requirement for the vehicle that dealt with power management or the boards themselves. Issues pertaining to visibility underwater for our camera systems was a major focus for our team.
+            </p>
+            <p>I picked up EDA software 5 months before this specific project, so despite feeling green in various areas, I felt confident enough to tackle the board for the actual light fixture on my own. Despite this confidence, I made it a point to thoroughly understand and even borrow concepts from light systems used in previous years and in other projects to optimize the design. There was a lot to learn from past successes and failures, and continuous improvement can’t happen unless you fully understand the baseline first.</p>
+            <p>Let's get into the design.</p>
             
             <h3>2|DESIGN</h3>
             
             <ul>There were a few main ideas to consider when designing this board:<br></br>
-              <li>The camera must be provided with enough light to veiw the ROV's surroundings.</li>
+              <li>The camera needed to be provided with enough light to veiw the ROV's surroundings.</li>
               
-              <li>Efficiency is key, since the ROV 48V PSU needs to be used for other crucial systems as well.</li>
+              <li>Power efficiency is paramount, as the 48V PSU needs to supply power for other crucial systems as well.</li>
               
-              <li>The light will be housed in an airtight enclosure. [AKA: HEAT]</li>
+              <li>The light will be housed in a small airtight enclosure. That means heat is a major point of consideration.</li>
               
-            <p>Since the the leds are meant to be used for a camera underwater</p>
-            
+            <p>Given the light requirements and the important emphasis on efficiency, the obvious move here is the best one: to focus on sourcing high power LED diodes. Development for this component has reached a point where very powerful LEDs capable of illuminate vast distances are not only perfect for our circumstances, but also accessible. Being energy efficient and very capable while still also remaining rather cheap, purchasing these diodes and slapping them on a board was the clear way to go. 
+            </p>
+
+            <p>However, finding the right components that play well with the constraints and situation given wasn’t as intuitive. Thankfully, Digikey had some really good-performing LEDs already stocked at reasonable prices. Taking max current draw and voltage requirements in mind, I ended up purchasing a batch of J-Series 2138-JR5050AWT-Q diodes.
+            </p>
+
+              <p>They had a current max of 1A with a minimum operating 5.8V requirement, so it fit extremely well into the constraints I needed to consider. Heat dissipation became the next focus. I ended up turning to previous designs of similar tasks in my club as well as online resources. Despite taking an embarrassing 5 months, this was when I finally discovered a Holy Grail treasured by all PCB designers: The Ground Plane. </p> 
+              <p><i>(Needless to say, ground planes have since become a fundamental backbone of most of my projects.)</i></p>
+              <p>There is a good chance those with an EE background in the industry already know about what they do. However, for the sake of the story and for those curious, I decided that a quick blurb about them couldnt hurt. Feel free to skip the next section if you are here only for the project!</p>
+
             </ul>
+            <h3>2A| ~/DESIGN/GROUND_PLANES</h3>
+            <p>Simply put, ground planes are large areas of copper on a PCB that serve as a common ground for all electrical components in its area. This provides designers the luxury of making better routes and traces for their PCB, as the space requirement for possible ground lines are gone.</p>
+            <p>Ground planes don’t only serve as a quality of life benefit for designers though. In fact, it is a critical component that plays a larger role in the real world beyond what one might assume at first.</p>
+            <ul>
+              <p>They are essential for:</p>
+              <li>Signal Integrity-</li>
+              <li>Power Distribution-</li>
+              <li>Heat Dissipation-</li>
+            </ul>
+
             <ul>
                 <li>Test </li>
                 <li>idk</li>
             </ul>
             <img src="/Assets/ringoofdoom_schematic.png" alt="The Final PCB layout" class = "center-border">
             <p class=center>F1: EAGLE Footprint Editor</p>
+            <h3>3| ANALYSIS</h3>
             <ul>
                 <li><a href="/index.html">[cd ..]</a> BACK TO HOME</li>
             </ul>
           </div>
       </div>
   </div>
+  <script src="/script.js"></script>
+
   </body>
   </html>

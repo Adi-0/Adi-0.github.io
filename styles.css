@@ -1,171 +1,193 @@
 body {
-  background-color: black;
-  color: white;
-  font-family: 'Courier New', Courier, monospace;
-  /*font: 1.3rem Inconsolata, monospace;*/
-  margin: 0;
-  padding: 0;
-  text-shadow: 0 0 8px #ff7800;
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    /*font: 1.3rem Inconsolata, monospace;   note: this is the alternative funky one*/
+    margin: 0;
+    padding: 0;
+    text-shadow: 0 0 8px #ff7800;
+  }
+  
+/*flicker*/
+@keyframes flickerText {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    opacity: 1; /* Hide the text note:DISABLED FOR ACCESSIBILITY */
+  }
+  10%, 30%, 50%, 70%, 90% {
+    opacity: 1; /* Show the text */
+  }
 }
 
-.terminal {
-  /*Thank god for the existence of w3schools */
-  width: 80%;
-  margin: 50px auto;
-  background-color: #000;
-  border: 2px solid #ff7800;
-  border-radius: 5px;
-  padding: 20px;
-  box-shadow: 0 0 10px #ffbe6f;
-}
+  .terminal {
+    /*Thank god for the existence of w3schools */
+    width: 80%;
+    margin: 50px auto;
+    background-color: #000;
+    border: 2px solid #ff7800;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px #ffbe6f;
+    transform-origin: center; /* Set the transformation origin to the top */
+    transform: scaleY(0); /* Initially scale the terminal vertically to 0 */
+    animation: expandTerminal 0.5s forwards, flickerText 0.6s 0.5s 1; /* Flicker stopped for accessibility */
+    }
+  
+  @keyframes expandTerminal {
+    0% {
+      transform: scaleY(0); /* Initially scale the terminal vertically to 0 */
+    }
+    100% {
+      transform: scaleY(1); /* Scale the terminal vertically to 100% */
+    }
+  }
 
-.terminal-header {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 10px;
-}
-
-.terminal-buttons {
-  /*For color scheme aesthetic. Might remove later*/
-  display: flex;
-}
-
-.terminal-button {
-  width: 12px;
-  height: 12px;
-  background-color: #ffbe6f;
-  border-radius: 50%;
-  margin-left: 5px;
-}
-
-.terminal-button2 {
-  width: 12px;
-  height: 12px;
-  background-color: #b5835a;
-  border-radius: 50%;
-  margin-left: 5px;
-}
-
-.terminal-button3 {
-  width: 12px;
-  height: 12px;
-  background-color: #be4444;
-  border-radius: 50%;
-  margin-left: 5px;
-}
-
-.terminal-body {
-  background-color: #000;
-  padding: 10px;
-}
-
-.terminal-content {
-  line-height: 1.5;
-}
-
-h1,
-h2 {
-  color: #ffbe6f;
-}
-
-h3 {
-  color: #be4444;
-}
-
-h4 {
-  color: #ffa053;
-  font-size:17px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li:before {
-  content: "~$ ";
-  color: #ff7800;
-  margin-right: 5px;
-}
-
-a:link {
-  color: #ff7800;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #ff7800;
-  /*  color: #be4444; Not sure if I want to make the color change when the link is clicked, but just in case this is the hex I would use if it did.*/
-  background-color: transparent;
-  text-decoration: none;
-}
-
-
-a:hover {
-  color: #ffa348;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-a:active {
-  /* cool flash nobody will notice :(*/
-  color: #ffffff;
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-::-moz-selection {
-  /* because Firefox is apparantly cool and different*/
-  color: #000000;
-  background: #ffa46b;
-}
-
-::selection {
-  color: #000000;
-  background: #ffa46b;
-}
-
-.line {
-  /*Fancy line that DOES NOT WANT TO WORK(??)*/
-  width: 100%;
-  border: 1px solid #ff7800;
-  box-shadow: 0 0 10px #ffbe6f;
-
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.center-border {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  border: 1px solid #be4444;
-  box-shadow: 0 0 8px #ffbe6f;
-}
-
-.center-border-smol {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
-  border: 1px solid #be4444;
-  box-shadow: 0 0 8px #ffbe6f;
-}
-
-p2 {
-  text-align: center;
-  vertical-align: middle;
-  display: table-cell;
-}
-
-.br2 { 
-    display: block; 
-    margin-bottom: -.2em; 
-} 
+  .terminal-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+  
+  .terminal-buttons {
+    /*For color scheme aesthetic. Might remove later*/
+    display: flex;
+  }
+  
+  .terminal-button {
+    width: 12px;
+    height: 12px;
+    background-color: #ffbe6f;
+    border-radius: 50%;
+    margin-left: 5px;
+  }
+  
+  .terminal-button2 {
+    width: 12px;
+    height: 12px;
+    background-color: #b5835a;
+    border-radius: 50%;
+    margin-left: 5px;
+  }
+  
+  .terminal-button3 {
+    width: 12px;
+    height: 12px;
+    background-color: #be4444;
+    border-radius: 50%;
+    margin-left: 5px;
+  }
+  
+  .terminal-body {
+    background-color: #000;
+    padding: 10px;
+  }
+  
+  .terminal-content {
+    line-height: 1.5;
+  }
+  
+  h1,
+  h2 {
+    color: #ffbe6f;
+  }
+  
+  h3 {
+    color: #be4444;
+  }
+  
+  h4 {
+    color: #ffa053;
+    font-size:17px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li:before {
+    content: "~$ ";
+    color: #ff7800;
+    margin-right: 5px;
+  }
+  
+  a:link {
+    color: #ff7800;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: #ff7800;
+    /*  color: #be4444; Not sure if I want to make the color change when the link is clicked, but just in case this is the hex I would use if it did.*/
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  
+  a:hover {
+    color: #ffa348;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  a:active {
+    /* cool link flash nobody will notice :(*/
+    color: #ffffff;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  ::-moz-selection {
+    /* because Firefox is apparantly cool and different*/
+    color: #000000;
+    background: #ffa46b;
+  }
+  
+  ::selection {
+    color: #000000;
+    background: #ffa46b;
+  }
+  
+  .line {
+    /*Fancy line that DOES NOT WANT TO WORK(??)*/
+    width: 100%;
+    border: 1px solid #ff7800;
+    box-shadow: 0 0 10px #ffbe6f;
+  
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+  .center-border {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 1px solid #be4444;
+    box-shadow: 0 0 8px #ffbe6f;
+  }
+  
+  .center-border-smol {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    border: 1px solid #be4444;
+    box-shadow: 0 0 8px #ffbe6f;
+  }
+  
+  p2 {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+  }
+  
+  .br2 { 
+      display: block; 
+      margin-bottom: -.2em; 
+  } 
